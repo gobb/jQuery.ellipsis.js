@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset=utf-8 />
+    <title>jQuery.ellipsis.js</title>
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="jquery.ellipsis.js"></script>
+    <style type="text/css">
+        body {
+            padding: 20px 0;
+        }
+
+        table {
+            width: 300px;
+        }
+
+        .fixed-height {
+            height: 100px;
+            overflow: hidden;
+        }
+    </style>
+    </head>
+<body>
+
+    <div class="container">
+
+        <div class="hero-unit test zero-config">
+            <h1>jQuery.ellipsis.js</h1>
+            <p>Originally from <a href="http://ellipsis.frebsite.nl/" target="_blank">http://ellipsis.frebsite.nl/</a>, I have fixed quite some bugs for the plugin.</p>
+
+            <pre>$('.test.after-ellipsis').ellipsis({
+    ellipsis: "... (ellipsis string)" // "..." by default.
+    after: "&lt;span&gt;View More&lt;/span&gt;",
+});</pre>
+        </div>
+
+        <button id="revert" class="btn">Click to Revert</button>
+
+        <div class="row">
+
+            <div class="span4">
+
+                <h2>Zero Config</h2>
+
+                <div class="test zero-config fixed-height well">
+                    <h3>Pain Text</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing elit</strong>. Nunc at sem ut tortor molestie faucibus accumsan vel nisl. Etiam vehicula hendrerit lacinia. Nam a eros enim, ut <strong>viverra metus</strong>. Ut eu sodales nulla. Etiam nec tempor ipsum. Morbi odio nisi, placerat quis placerat at, rhoncus nec velit. Cras nibh ante, convallis et vulputate at, facilisis ac velit. Donec fringilla, mauris vitae sagittis aliquam, justo metus sollicitudin augue, sed accumsan elit est id augue. Sed adipiscing est quis nulla ultricies vestibulum.</p>
+                </div>
+
+                <div class="test zero-config fixed-height well">
+                    <h3>Tags</h3>
+                    <p>Tags: <a href="http://hypebeast.com/tags/aziz-ansari/" rel="tag">Aziz Ansari</a>, <a href="http://hypebeast.com/tags/footwear/" rel="tag">Footwear</a>, <a href="http://hypebeast.com/tags/kanye-west/" rel="tag">Kanye West</a>, <a href="http://hypebeast.com/tags/kobe-bryant/" rel="tag">Kobe Bryant</a>, <a href="http://hypebeast.com/tags/kobesystem/" rel="tag">KobeSystem</a>, <a href="http://hypebeast.com/tags/nike/" rel="tag">Nike</a>, <a href="http://hypebeast.com/tags/nike-basketball/" rel="tag">Nike Basketball</a>, <a href="http://hypebeast.com/tags/nike-zoom-kobe-vii/" rel="tag">Nike Zoom Kobe VII</a>, <a href="http://hypebeast.com/tags/videos/" rel="tag">Videos</a>, <a href="http://hypebeast.com/tags/wang-leehom/" rel="tag">Wang Leehom</a>, <a href="http://hypebeast.com/tags/aziz-ansari/" rel="tag">Aziz Ansari</a>, <a href="http://hypebeast.com/tags/footwear/" rel="tag">Footwear</a>, <a href="http://hypebeast.com/tags/kanye-west/" rel="tag">Kanye West</a>, <a href="http://hypebeast.com/tags/kobe-bryant/" rel="tag">Kobe Bryant</a>, <a href="http://hypebeast.com/tags/kobesystem/" rel="tag">KobeSystem</a>, <a href="http://hypebeast.com/tags/nike/" rel="tag">Nike</a>, <a href="http://hypebeast.com/tags/nike-basketball/" rel="tag">Nike Basketball</a>, <a href="http://hypebeast.com/tags/nike-zoom-kobe-vii/" rel="tag">Nike Zoom Kobe VII</a>, <a href="http://hypebeast.com/tags/videos/" rel="tag">Videos</a>, <a href="http://hypebeast.com/tags/wang-leehom/" rel="tag">Wang Leehom</a></p>
+                </div>
+
+            </div>
+
+            <div class="span4">
+                <h2>Ellipsis</h2>
+                <div class="test ellipsis fixed-height well">
+                    <h3>Pain Text</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing elit</strong>. Nunc at sem ut tortor molestie faucibus accumsan vel nisl. Etiam vehicula hendrerit lacinia. Nam a eros enim, ut <strong>viverra metus</strong>. Ut eu sodales nulla. Etiam nec tempor ipsum. Morbi odio nisi, placerat quis placerat at, rhoncus nec velit. Cras nibh ante, convallis et vulputate at, facilisis ac velit. Donec fringilla, mauris vitae sagittis aliquam, justo metus sollicitudin augue, sed accumsan elit est id augue. Sed adipiscing est quis nulla ultricies vestibulum.</p>
+                </div>
+
+                <div class="test ellipsis fixed-height well">
+                    <h3>Tags</h3>
+                    <p>Tags: <a href="http://hypebeast.com/tags/aziz-ansari/" rel="tag">Aziz Ansari</a>, <a href="http://hypebeast.com/tags/footwear/" rel="tag">Footwear</a>, <a href="http://hypebeast.com/tags/kanye-west/" rel="tag">Kanye West</a>, <a href="http://hypebeast.com/tags/kobe-bryant/" rel="tag">Kobe Bryant</a>, <a href="http://hypebeast.com/tags/kobesystem/" rel="tag">KobeSystem</a>, <a href="http://hypebeast.com/tags/nike/" rel="tag">Nike</a>, <a href="http://hypebeast.com/tags/nike-basketball/" rel="tag">Nike Basketball</a>, <a href="http://hypebeast.com/tags/nike-zoom-kobe-vii/" rel="tag">Nike Zoom Kobe VII</a>, <a href="http://hypebeast.com/tags/videos/" rel="tag">Videos</a>, <a href="http://hypebeast.com/tags/wang-leehom/" rel="tag">Wang Leehom</a>, <a href="http://hypebeast.com/tags/aziz-ansari/" rel="tag">Aziz Ansari</a>, <a href="http://hypebeast.com/tags/footwear/" rel="tag">Footwear</a>, <a href="http://hypebeast.com/tags/aziz-ansari/" rel="tag">Aziz Ansari</a>, <a href="http://hypebeast.com/tags/footwear/" rel="tag">Footwear</a>, <a href="http://hypebeast.com/tags/kanye-west/" rel="tag">Kanye West</a>, <a href="http://hypebeast.com/tags/kobe-bryant/" rel="tag">Kobe Bryant</a>, <a href="http://hypebeast.com/tags/kobesystem/" rel="tag">KobeSystem</a>, <a href="http://hypebeast.com/tags/nike/" rel="tag">Nike</a>, <a href="http://hypebeast.com/tags/nike-basketball/" rel="tag">Nike Basketball</a>, <a href="http://hypebeast.com/tags/nike-zoom-kobe-vii/" rel="tag">Nike Zoom Kobe VII</a>, <a href="http://hypebeast.com/tags/videos/" rel="tag">Videos</a>, <a href="http://hypebeast.com/tags/wang-leehom/" rel="tag">Wang Leehom</a>, <a href="http://hypebeast.com/tags/aziz-ansari/" rel="tag">Aziz Ansari</a>, <a href="http://hypebeast.com/tags/footwear/" rel="tag">Footwear</a></p>
+                </div>
+
+            </div>
+
+            <div class="span4">
+
+                <h2>After</h2>
+
+                <div class="test after fixed-height well">
+                    <h3>Pain Text</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing elit</strong>. Nunc at sem ut tortor molestie faucibus accumsan vel nisl. Etiam vehicula hendrerit lacinia. Nam a eros enim, ut <strong>viverra metus</strong>. Ut eu sodales nulla. Etiam nec tempor ipsum. Morbi odio nisi, placerat quis placerat at, rhoncus nec velit. Cras nibh ante, convallis et vulputate at, facilisis ac velit. Donec fringilla, mauris vitae sagittis aliquam, justo metus sollicitudin augue, sed accumsan elit est id augue. Sed adipiscing est quis nulla ultricies vestibulum.</p>
+                </div>
+
+                <div class="test after fixed-height well">
+                    <h3>Tags</h3>
+                    <p>Tags: <a href="http://hypebeast.com/tags/aziz-ansari/" rel="tag">Aziz Ansari</a>, <a href="http://hypebeast.com/tags/footwear/" rel="tag">Footwear</a>, <a href="http://hypebeast.com/tags/kanye-west/" rel="tag">Kanye West</a>, <a href="http://hypebeast.com/tags/kobe-bryant/" rel="tag">Kobe Bryant</a>, <a href="http://hypebeast.com/tags/kobesystem/" rel="tag">KobeSystem</a>, <a href="http://hypebeast.com/tags/nike/" rel="tag">Nike</a>, <a href="http://hypebeast.com/tags/nike-basketball/" rel="tag">Nike Basketball</a>, <a href="http://hypebeast.com/tags/nike-zoom-kobe-vii/" rel="tag">Nike Zoom Kobe VII</a>, <a href="http://hypebeast.com/tags/videos/" rel="tag">Videos</a>, <a href="http://hypebeast.com/tags/wang-leehom/" rel="tag">Wang Leehom</a>, <a href="http://hypebeast.com/tags/aziz-ansari/" rel="tag">Aziz Ansari</a>, <a href="http://hypebeast.com/tags/footwear/" rel="tag">Footwear</a>, <a href="http://hypebeast.com/tags/kanye-west/" rel="tag">Kanye West</a>, <a href="http://hypebeast.com/tags/kobe-bryant/" rel="tag">Kobe Bryant</a>, <a href="http://hypebeast.com/tags/kobesystem/" rel="tag">KobeSystem</a>, <a href="http://hypebeast.com/tags/nike/" rel="tag">Nike</a>, <a href="http://hypebeast.com/tags/nike-basketball/" rel="tag">Nike Basketball</a>, <a href="http://hypebeast.com/tags/nike-zoom-kobe-vii/" rel="tag">Nike Zoom Kobe VII</a>, <a href="http://hypebeast.com/tags/videos/" rel="tag">Videos</a>, <a href="http://hypebeast.com/tags/wang-leehom/" rel="tag">Wang Leehom</a></p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="span4">
+                <h2>Ellipsis + After element</h2>
+                <div class="test after-ellipsis fixed-height well">
+                    <h3>Pain Text</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing elit</strong>. Nunc at sem ut tortor molestie faucibus accumsan vel nisl. Etiam vehicula hendrerit lacinia. Nam a eros enim, ut <strong>viverra metus</strong>. Ut eu sodales nulla. Etiam nec tempor ipsum. Morbi odio nisi, placerat quis placerat at, rhoncus nec velit. Cras nibh ante, convallis et vulputate at, facilisis ac velit. Donec fringilla, mauris vitae sagittis aliquam, justo metus sollicitudin augue, sed accumsan elit est id augue. Sed adipiscing est quis nulla ultricies vestibulum.</p>
+                </div>
+
+                <div class="test after-ellipsis fixed-height well">
+                    <h3>Tags</h3>
+                    <p>Tags: <a href="http://hypebeast.com/tags/aziz-ansari/" rel="tag">Aziz Ansari</a>, <a href="http://hypebeast.com/tags/footwear/" rel="tag">Footwear</a>, <a href="http://hypebeast.com/tags/kanye-west/" rel="tag">Kanye West</a>, <a href="http://hypebeast.com/tags/kobe-bryant/" rel="tag">Kobe Bryant</a>, <a href="http://hypebeast.com/tags/kobesystem/" rel="tag">KobeSystem</a>, <a href="http://hypebeast.com/tags/nike/" rel="tag">Nike</a>, <a href="http://hypebeast.com/tags/nike-basketball/" rel="tag">Nike Basketball</a>, <a href="http://hypebeast.com/tags/nike-zoom-kobe-vii/" rel="tag">Nike Zoom Kobe VII</a>, <a href="http://hypebeast.com/tags/videos/" rel="tag">Videos</a>, <a href="http://hypebeast.com/tags/wang-leehom/" rel="tag">Wang Leehom</a>, <a href="http://hypebeast.com/tags/aziz-ansari/" rel="tag">Aziz Ansari</a>, <a href="http://hypebeast.com/tags/footwear/" rel="tag">Footwear</a>, <a href="http://hypebeast.com/tags/kanye-west/" rel="tag">Kanye West</a>, <a href="http://hypebeast.com/tags/kobe-bryant/" rel="tag">Kobe Bryant</a>, <a href="http://hypebeast.com/tags/kobesystem/" rel="tag">KobeSystem</a>, <a href="http://hypebeast.com/tags/nike/" rel="tag">Nike</a>, <a href="http://hypebeast.com/tags/nike-basketball/" rel="tag">Nike Basketball</a>, <a href="http://hypebeast.com/tags/nike-zoom-kobe-vii/" rel="tag">Nike Zoom Kobe VII</a>, <a href="http://hypebeast.com/tags/videos/" rel="tag">Videos</a>, <a href="http://hypebeast.com/tags/wang-leehom/" rel="tag">Wang Leehom</a></p>
+                </div>
+
+            </div>
+
+            <div class="span8">
+                <h2>Long Paragraphs</h2>
+                <div class="test long-paragraphs well" style="height:450px">
+                    <p>
+                        <a href="#" class="thumbnail" style="height: 180px;">
+                            <img src="http://placehold.it/580x180" alt="" height="180px">
+                        </a>
+                    </p>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium tincidunt tincidunt. Quisque sit amet leo lorem, quis blandit sem. Aenean porta nisl sit amet justo euismod a volutpat justo molestie. Nunc et augue et elit tincidunt interdum. Pellentesque vitae nunc ut nisi scelerisque tristique quis viverra sapien. Donec tincidunt nulla vel elit viverra tincidunt. Integer interdum egestas eros accumsan aliquet. Nullam vitae quam arcu.
+                    </p>
+                    <p>
+                    Ut id augue nec ligula ullamcorper fermentum. Donec nec magna magna. Praesent sagittis quam magna. Integer massa erat, fermentum ac tristique eu, varius vitae velit. Praesent justo dui, tristique quis iaculis non, ultrices condimentum neque. Quisque iaculis velit rutrum lacus laoreet suscipit. Mauris aliquet lacus sit amet lectus euismod fermentum lobortis massa laoreet. Curabitur sollicitudin cursus lacus at feugiat. Curabitur vitae purus enim. In a mattis quam. In hac habitasse platea dictumst.
+                    </p>
+                    <p>
+                    Suspendisse ultrices elementum elit id auctor. Morbi quis augue urna. Ut sit amet quam ac tellus ultrices dignissim. Vivamus sem mi, cursus eu convallis vel, ultricies vitae ante. Nullam sagittis, massa eget ultricies convallis, dolor nibh mollis diam, at aliquet mauris felis ac libero. Nullam vel tellus sit amet enim porttitor pulvinar. Nullam commodo velit vitae metus posuere in mollis elit convallis.
+                    </p>
+                    <p>
+                    Vivamus eros risus, ultrices non sollicitudin eget, vestibulum at odio. Fusce laoreet lobortis est, ut ullamcorper magna ullamcorper sed. Ut quis fermentum massa. Praesent ut ante eget purus ultrices euismod. Morbi dictum ante nec velit imperdiet porttitor. Nullam porta mauris non erat consequat sagittis. Aenean sit amet elit odio, id commodo nulla. Vestibulum vulputate sem erat, quis vestibulum velit. Quisque suscipit porta massa et elementum. Aliquam sed quam scelerisque dui rutrum adipiscing eget in nibh. Sed gravida blandit ultricies. Donec rhoncus molestie magna eget volutpat. Sed mauris velit, varius et tincidunt vitae, volutpat ac elit. Etiam faucibus gravida leo, egestas pellentesque leo accumsan id. Sed orci diam, volutpat at sollicitudin quis, tincidunt et tortor. Donec posuere convallis viverra.
+                    </p>
+                    <p>
+                    Nullam fringilla, purus eget laoreet consectetur, odio metus rutrum libero, at tristique urna arcu vel sapien. Proin vel erat felis. Sed tincidunt porttitor nulla, at pharetra nisl faucibus non. Vivamus pellentesque, quam et facilisis dictum, risus ante porta risus, non ultrices magna ante nec ipsum. Nullam vitae dignissim nisl. Phasellus sit amet suscipit enim. Duis eu imperdiet ipsum.
+                    </p>
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+
+    <script>
+        $(function(){
+
+            function dodo() {
+                console.time("Zero Config ("+$('.test.zero-config').length+")");
+                $('.test.zero-config').ellipsis();
+                console.timeEnd("Zero Config ("+$('.test.zero-config').length+")");
+
+                console.time("After ("+$('.test.after').length+")");
+                $('.test.after').ellipsis({
+                    afterElement: "<span class=\"after-element label notice\">this is an after element</span>"
+                });
+                console.timeEnd("After ("+$('.test.after').length+")");
+
+
+                console.time("Ellipsis ("+$('.test.ellipsis').length+")");
+                $('.test.ellipsis').ellipsis({
+                    ellipsis: "... (this is an ellipsis)"
+                });
+                console.timeEnd("Ellipsis ("+$('.test.ellipsis').length+")");
+
+                $('.test.after-ellipsis').ellipsis({
+                    afterElement: "<span class=\"after-element label notice\">after element</span>",
+                    ellipsis: "... (ellipsis string)"
+                });
+
+                console.time("Long Paragraphs");
+                $('.test.long-paragraphs').ellipsis();
+                console.timeEnd("Long Paragraphs");
+
+            }
+            
+            dodo();
+
+            $('#revert').toggle(function(){
+                $('.test').ellipsis('revert');
+            }, function() {
+                dodo();
+            });
+
+            // warning
+
+            $('.ellipsis').each(function(){
+                var $this = $(this);
+                if($this.outerHeight() > $this.parent().innerHeight()) {
+                    $this.parent('.block-message').removeClass('info').addClass('error');
+                }
+            });
+
+            $('.after-element').each(function() {
+                var $this = $(this);
+                if($this.parent().parent().is('.ellipsis') === false) {
+                    $this.parents('.block-message').removeClass('info').addClass('error');
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>
